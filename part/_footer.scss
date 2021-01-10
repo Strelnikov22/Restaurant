@@ -1,0 +1,38 @@
+.footer{
+    min-height: 375px;
+    background-color: $gray;
+    padding: 50px 0;
+
+    .container{
+        max-width: 1300px;
+        margin: 0 auto;
+        @extend %flex-active;
+        justify-content: space-between;
+
+        @media screen and (max-width:870px){
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    h2{
+        @include line_decoration($white, url(img/Vector_text_white.svg));
+        @extend %for_h2;
+        font-size: 21px;
+        &::after{
+            margin-top: 25px;
+        }
+    }
+    p{
+        color:$white;
+        margin: 40px 0 25px 0;
+    }
+
+    &__block{
+        width: 410px;
+        text-align: center;
+        @media screen and (max-width:870px){
+            margin: 25px auto 0px auto;
+        }
+    }
+}

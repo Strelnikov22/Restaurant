@@ -1,0 +1,40 @@
+.info{
+    background: url(img/bg_info.jpg),
+    linear-gradient(270deg, #F4F2F2 18.35%, #fffffffa 84.09%);
+    background-blend-mode:soft-light;
+    @extend %bg;
+
+    .container{
+        @extend %flex-active;
+        justify-content:space-between;
+        @include tablet{
+            flex-direction:column;
+            justify-content: center;
+        }
+    }
+
+    &__text{
+        max-width: 470px;
+        text-align: center;
+        h2{
+            @include line_decoration($gold, url(img/Vector_text.svg));
+            @extend %for_h2;
+        }
+        p{
+            color:$gray;
+        }
+        img{
+            margin: 15px 0px 0px 100px 
+        }
+        @media screen and (max-width:1220px){
+            margin: 0px auto;
+            max-width: 400px;
+        }
+        
+    }
+    &__img{
+        @media screen and (max-width:1220px){
+            display: none;
+        }
+    }
+}

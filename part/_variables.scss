@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Yeseva+One&display=swap');
+$font_heading: 'Yeseva One', cursive;
+$font_text: 'Lato', sans-serif;
+
+$white:#fff;
+$gold:#C90;
+$lite_gold:#C89F2D;
+$gray:#4C4C4C;
+$silver:#9B9B9B;
+$bg_black:rgba(0, 0, 0, 0.8);
+
+
+%bg {
+    background: {
+        repeat: no-repeat;
+        position: center center;
+        size:cover;
+        attachment: fixed;
+    }
+    overflow: hidden;
+}
+@mixin bg_icon($img){
+    background: {
+        image: $img;
+        repeat: no-repeat;
+        position: center;
+        size:175%;
+    }
+    overflow: hidden;
+}
+
+@mixin line_decoration($color, $img) {
+    color: $color;
+    &::after{
+        content: $img;
+        display: block;
+    }
+}
+
+%for_h2 {
+    text-align: center;
+    font:{
+        family: $font_heading;
+        weight:400;
+        size: 36px;
+    } 
+
+}
+
+%flex-active{
+    display: flex;
+}
+
+@mixin tablet() {
+    @media screen and (max-width:768px) {
+        @content;
+    }
+}
